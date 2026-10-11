@@ -1,6 +1,6 @@
 # Онлайн-деканат
 
-[![Status](https://img.shields.io/badge/status-в_разработке-orange)]() [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]() [![FastAPI](https://img.shields.io/badge/FastAPI-backend-green)]() [![MS SQL](https://img.shields.io/badge/MS_SQL-database-red)]()
+[![Status](https://img.shields.io/badge/status-в_разработке-orange)]() [![Python](https://img.shields.io/badge/c++-17.10%2B-blue)]() [![FastAPI](https://img.shields.io/badge/FastAPI-backend-green)]() [![MS SQL](https://img.shields.io/badge/MS_SQL-database-red)]()
 
 «Онлайн-деканат» — это интеллектуальный цифровой помощник в виде кроссплатформенного десктопного приложения (macOS и Windows), который сканирует студенческий документ с помощью **веб-камеры устройства**, распознает текст через OCR и мгновенно отвечает на вопросы, основываясь на актуальных правилах и регламентах вуза.
 
