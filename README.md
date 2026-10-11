@@ -1,8 +1,19 @@
  # Онлайн-деканат
 
+<!-- Статус проекта -->
+[![Status](https://img.shields.io/badge/Status-в_разработке-orange?style=for-the-badge&logo=git)](https://shields.io/)
 
-[![Status](https://img.shields.io/badge/status-в_разработке-orange)]() [![Static Badge](https://img.shields.io/badge/c%2B%2B-17)
- [![FastAPI](https://img.shields.io/badge/FastAPI-backend-green)]() [![MS SQL](https://img.shields.io/badge/MS_SQL-database-red)]() 
+[![C++](https://img.shields.io/badge/C%2B%2B-17%2F20-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-C%2B%2B_API-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
+[![Tesseract OCR](https://img.shields.io/badge/Tesseract-OCR_C%2B%2B-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/tesseract-ocr/tesseract)
+[![CMake](https://img.shields.io/badge/CMake-Build-064F8C?style=for-the-badge&logo=cmake&logoColor=white)](https://cmake.org/)
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![pybind11](https://img.shields.io/badge/pybind11-Binding-FF6F00?style=for-the-badge&logo=python&logoColor=white)](https://github.com/pybind/pybind11)
+
+[![MS SQL Server](https://img.shields.io/badge/MS_SQL_Server-T--SQL-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
+[![Platform](https://img.shields.io/badge/Platform-macOS_%7C_Windows-lightgrey?style=for-the-badge&logo=apple&logoColor=black)](https://shields.io/)
 
 «Онлайн-деканат» — это интеллектуальный цифровой помощник в виде кроссплатформенного десктопного приложения (macOS и Windows), который сканирует студенческий документ с помощью **веб-камеры устройства**, распознает текст через OCR и мгновенно отвечает на вопросы, основываясь на актуальных правилах и регламентах вуза.
 
