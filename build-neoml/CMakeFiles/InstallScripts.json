@@ -1,0 +1,15 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/pasavoronkov/Documents/programm/umirHack3/DecanAssistent/build-neoml/cmake_install.cmake",
+		"/Users/pasavoronkov/Documents/programm/umirHack3/DecanAssistent/build-neoml/neoml/cmake_install.cmake",
+		"/Users/pasavoronkov/Documents/programm/umirHack3/DecanAssistent/build-neoml/neoml/src/cmake_install.cmake",
+		"/Users/pasavoronkov/Documents/programm/umirHack3/DecanAssistent/build-neoml/NeoML/include/FineObjLite/cmake_install.cmake",
+		"/Users/pasavoronkov/Documents/programm/umirHack3/DecanAssistent/build-neoml/NeoMathEngine/cmake_install.cmake",
+		"/Users/pasavoronkov/Documents/programm/umirHack3/DecanAssistent/build-neoml/NeoMathEngine/src/cmake_install.cmake",
+		"/Users/pasavoronkov/Documents/programm/umirHack3/DecanAssistent/build-neoml/NeoOnnx/cmake_install.cmake",
+		"/Users/pasavoronkov/Documents/programm/umirHack3/DecanAssistent/build-neoml/NeoOnnx/src/cmake_install.cmake",
+		"/Users/pasavoronkov/Documents/programm/umirHack3/DecanAssistent/build-neoml/NeoOnnx/Onnx2NeoML/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
