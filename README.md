@@ -1,76 +1,54 @@
-# Онлайн-деканат
+ # Онлайн-деканат
 
-[![Status](https://img.shields.io/badge/status-в_разработке-orange)]() [![Python](https://img.shields.io/badge/python-3.10%2B-blue)]() [![FastAPI](https://img.shields.io/badge/FastAPI-backend-green)]() [![MS SQL](https://img.shields.io/badge/MS_SQL-database-red)]()
+<!-- Статус проекта -->
+[![Status](https://img.shields.io/badge/Status-в_разработке-orange?style=for-the-badge&logo=git)](https://shields.io/)
+
+[![C++](https://img.shields.io/badge/C%2B%2B-17%2F20-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)](https://isocpp.org/)
+[![OpenCV](https://img.shields.io/badge/OpenCV-C%2B%2B_API-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)](https://opencv.org/)
+[![Tesseract OCR](https://img.shields.io/badge/Tesseract-OCR_C%2B%2B-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/tesseract-ocr/tesseract)
+[![CMake](https://img.shields.io/badge/CMake-Build-064F8C?style=for-the-badge&logo=cmake&logoColor=white)](https://cmake.org/)
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![pybind11](https://img.shields.io/badge/pybind11-Binding-FF6F00?style=for-the-badge&logo=python&logoColor=white)](https://github.com/pybind/pybind11)
+
+[![MS SQL Server](https://img.shields.io/badge/MS_SQL_Server-T--SQL-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
+[![Platform](https://img.shields.io/badge/Platform-macOS_%7C_Windows-lightgrey?style=for-the-badge&logo=apple&logoColor=black)](https://shields.io/)
 
 «Онлайн-деканат» — это интеллектуальный цифровой помощник в виде кроссплатформенного десктопного приложения (macOS и Windows), который сканирует студенческий документ с помощью **веб-камеры устройства**, распознает текст через OCR и мгновенно отвечает на вопросы, основываясь на актуальных правилах и регламентах вуза.
 
-## Содержание
-- [Технологии и стек](#технологии-и-стек)
-- [Структура проекта и задачи](#структура-проекта-и-задачи)
-- [Использование](#использование)
-- [Начало работы](#начало-работы)
-- [Тестирование](#тестирование)
-- [Deploy и CI/CD](#deploy-и-cicd)
-- [Contributing](#contributing)
-- [FAQ](#faq)
-- [To do](#to-do)
-- [Команда проекта](#команда-проекта)
-
 ## Технологии и стек
 Полный технологический стек проекта:
-- **Python** — основной язык программирования для логики и бэкенда
+
+- **C++ ( C++)** — высокопроизводительное ядро приложения для обработки видеопотока с веб-камеры, детекции границ документов и предобработки изображений
+- **OpenCV (C++ API)** — библиотека компьютерного зрения для захвата кадров, выравнивания перспективы, HSV-фильтрации синих печатей и подготовки ROI к OCR
+- **Tesseract OCR (C++ API) / EasyOCR** — движок распознавания печатного и рукописного текста на студенческих билетах
+- **Python 3.10+** — язык для реализации бизнес-логики, связки компонентов и backend-сервисов
 - **FastAPI** — веб-фреймворк для создания REST API бэкенда
-- **OpenCV** — библиотека компьютерного зрения для захвата видеопотока с веб-камеры, предобработки, устранения шумов и выравнивания перспективы документов
-- **OCR (EasyOCR / PaddleOCR / Tesseract)** — распознавание текста на сканах студенческих документов
-- **MS SQL Server (T-SQL)** — реляционная база данных для хранения правил, регламентов и истории запросов
-- **pyodbc / SQLAlchemy** — инструменты для подключения и работы с MS SQL из Python
-- **PyQt6 / PySide6 (или CustomTkinter)** — инструменты для разработки кроссплатформенного графического десктопного интерфейса (macOS / Windows)
-- **Git, VS Code / JetBrains Rider** — инструменты разработки
+- **CMake & pybind11** — сборка C++ модулей и их интеграция/биндинг в Python-окружение
+- **MS SQL Server (T-SQL)** — реляционная база данных для хранения данных студентов, правил, регламентов и истории запросов
+- **pyodbc / SQLAlchemy** — инструменты для подключения и работы с MS SQL Server
+- **CustomTkinter / PyQt6** — графический десктопный интерфейс приложения (macOS / Windows)
+- **Git, CMake, VS Code / JetBrains CLion / Rider** — инструменты разработки и сборки
 
-## Структура проекта и задачи
-Проект разделен на две ключевые роли для параллельной разработки:
 
-### Роль 1: Разработчик Computer Vision, Backend и Баз Данных (Python + OpenCV + MS SQL)
-Задачи по обработке изображений с веб-камеры, распознаванию текста, хранению правил и созданию логики сервера:
-1. **Проектирование и настройка MS SQL базы данных:**
-   - Спроектировать схему базы данных в MS SQL (таблицы для документов, правил, категорий и истории обращений).
-   - Написать скрипты миграций или инициализации таблиц.
-   - Настроить подключение из Python к MS SQL с помощью `pyodbc` или `SQLAlchemy`.
-2. **Захват и предобработка кадров с веб-камеры (OpenCV):**
-   - Реализация подключения к веб-камере устройства (`cv2.VideoCapture`) для macOS и Windows.
-   - Разработка алгоритмов автовыравнивания перспективы и улучшения контрастности кадра с документом.
-3. **Распознавание текста (OCR):**
-   - Интеграция OCR-инструментария (например, EasyOCR или PaddleOCR).
-   - Парсинг извлеченного текста (выделение ФИО, группы, номера документа).
-4. **Поиск по правилам и API (FastAPI):**
-   - Реализация логики сопоставления вопроса и данных из MS SQL.
-   - Создание эндпоинтов на FastAPI, принимающих фото с камеры и вопрос, и возвращающих ответ со ссылками на правила.
+## Содержание
+- [Технологии и стек](#технологии-и-стек)
 
-### Роль 2: Разработчик Frontend / Desktop-приложения (Python UI - macOS & Windows)
-Задачи по созданию визуальной оболочки на ПК, пользовательскому опыту и интеграции с бэкендом:
-1. **Выбор фреймворка и каркас приложения:**
-   - Настройка кроссплатформенного проекта на PyQt6 / PySide6 или CustomTkinter.
-   - Проектирование адаптивного интерфейса под экраны macOS и Windows.
-2. **Интерфейс работы с веб-камерой:**
-   - Внедрение виджета трансляции видеопотока с веб-камеры в реальном времени.
-   - Создание кнопки «Сделать снимок / Скан документа» и области превью полученного фото.
-3. **Поле ввода запроса и блок выдачи ответа:**
-   - Добавление текстового поля для вопроса цифровому секретарю.
-   - Область вывода ответа с поддержкой форматирования и кликабельными ссылками на пункты правил.
-   - Индикатор загрузки на время работы OCR и запроса к бэкенду.
-4. **Сетевой клиент:**
-   - Реализация отправки HTTP-запросов к FastAPI-серверу с обработкой ошибок сети и таймаутов.
+- [Структура проекта и задачи](#структура-проекта-и-задачи)
 
-## Использование
-Запустите десктопное приложение на компьютере (macOS или Windows), поднесите студенческий документ к веб-камере и нажмите кнопку захвата кадра. Введите интересующий вас вопрос в текстовое поле — приложение передаст снимок на бэкенд, распознает текст, найдет ответ в базе MS SQL и выведет его со ссылками на регламенты.
+- [Использование](#использование)
 
-Пример отправки кадра с веб-камеры к бэкенду (FastAPI) из кода клиента:
-```python
-import requests
+- [Начало работы](#начало-работы)
 
-url = "[http://127.0.0.1:8000/api/scan-and-ask](http://127.0.0.1:8000/api/scan-and-ask)"
-files = {"file": open("webcam_snapshot.jpg", "rb")}
-data = {"question": "Как получить справку об обучении?"}
+- [Тестирование](#тестирование)
 
-response = requests.post(url, files=files, data=data)
-print(response.json())  # Выведет ответ секретаря со ссылками на правила
+- [Deploy и CI/CD](#deploy-и-cicd)
+
+- [Contributing](#contributing)
+
+- [FAQ](#faq)
+
+- [To do](#to-do)
+
+- [Команда проекта](#команда-проекта)
