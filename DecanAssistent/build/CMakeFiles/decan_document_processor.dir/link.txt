@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdecan_document_processor.a CMakeFiles/decan_document_processor.dir/src/document_processor.cpp.o CMakeFiles/decan_document_processor.dir/src/neoml_onnx_backend.cpp.o CMakeFiles/decan_document_processor.dir/src/text_post_processor.cpp.o
+/usr/bin/ranlib libdecan_document_processor.a

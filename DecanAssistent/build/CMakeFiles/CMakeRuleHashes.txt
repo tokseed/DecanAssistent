@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+208aaef04d56b4d721384d291eb4ea16 CMakeFiles/decan_setup_models
+da41237d1153eb4a210207d7be9da933 NeoOnnx/src/CMakeFiles/create_proto_dir
+0732cd37e854bf8886e0a08b2cf49736 NeoOnnx/src/cpp_proto/onnx.pb.h
+857021421bffc9e88e8fc71eb4598882 models/ocr_printed.onnx

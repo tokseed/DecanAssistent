@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -dynamiclib -Wl,-headerpad_max_install_names -o libNeoMathEngine.dylib -install_name @rpath/libNeoMathEngine.dylib CMakeFiles/NeoMathEngine.dir/Unity/unity_1_cxx.cxx.o CMakeFiles/NeoMathEngine.dir/MathEngineStackAllocator.cpp.o

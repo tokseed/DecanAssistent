@@ -1,0 +1,2 @@
+/usr/bin/ar qc libNeoOnnx.a CMakeFiles/NeoOnnx.dir/Unity/unity_6_cxx.cxx.o CMakeFiles/NeoOnnx.dir/Unity/unity_5_cxx.cxx.o CMakeFiles/NeoOnnx.dir/Unity/unity_4_cxx.cxx.o CMakeFiles/NeoOnnx.dir/Unity/unity_3_cxx.cxx.o CMakeFiles/NeoOnnx.dir/Unity/unity_2_cxx.cxx.o CMakeFiles/NeoOnnx.dir/Unity/unity_1_cxx.cxx.o CMakeFiles/NeoOnnx.dir/Unity/unity_0_cxx.cxx.o CMakeFiles/NeoOnnx.dir/cpp_proto/onnx.pb.cc.o
+/usr/bin/ranlib libNeoOnnx.a
